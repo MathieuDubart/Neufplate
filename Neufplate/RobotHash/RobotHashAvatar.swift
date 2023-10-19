@@ -13,7 +13,11 @@ public class RobotHashAvatar: Avatar {
         url ?? ""
     }
     
-    public init() {}
+    private var spriteType: RobotHashSpriteType
+    
+    public init(spriteType: RobotHashSpriteType) {
+        self.spriteType = spriteType
+    }
     
     public func generate(with hash: String? = nil) -> Void {
         let client = getClient();
@@ -26,6 +30,7 @@ public class RobotHashAvatar: Avatar {
     }
     
     func getClient() -> AvatarClientProtocol {
+        RobotHashClient.shared.setSpriteType(spriteType)
         return RobotHashClient.shared
     }
 }

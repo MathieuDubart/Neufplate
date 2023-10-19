@@ -26,7 +26,7 @@ struct Neufplate {
         self.nft = Nft()
             
         guard let state else { return nil }
-        await state.onTitling()
+        try? await state.onTitling()
 
         guard let nft else { return nil }
         return self.nft

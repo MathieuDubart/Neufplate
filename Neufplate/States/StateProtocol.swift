@@ -10,7 +10,7 @@ import Foundation
 protocol StateProtocol {
     var neufplate: Neufplate { get set }
     
-    func onTitling() async -> String?
-    func onMakingCollision() -> String?
-    func onGenerate() -> String?
+    func onTitling() async throws-> String?
+    func onMakingCollision() throws -> String?
+    func onGenerate() throws -> String?
 }

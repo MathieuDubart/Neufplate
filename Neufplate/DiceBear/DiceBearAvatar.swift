@@ -13,7 +13,11 @@ public class DiceBearAvatar: Avatar {
         url ?? "Error"
     }
     
-    public init() {}
+    private var spriteType: DiceBearSpriteType
+    
+    public init(spriteType: DiceBearSpriteType) {
+        self.spriteType = spriteType
+    }
     
     public func generate(with hash: String? = nil) -> Void {
         let client = getClient();
@@ -26,6 +30,7 @@ public class DiceBearAvatar: Avatar {
     }
     
     func getClient() -> AvatarClientProtocol {
+        DiceBearClient.shared.setSpriteType(spriteType)
         return DiceBearClient.shared
     }
 }

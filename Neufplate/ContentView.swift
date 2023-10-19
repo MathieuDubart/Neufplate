@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var avatar = DiceBearAvatar()
+    @State private var avatar = DiceBearAvatar(spriteType: .BOTTTS)
     @State private var builder: UserBuilder = UserBuilder()
     @State private var user: User?
     @State private var CBSClient = CorporateBsClient()
-    
     @State private var generatedUrl = ""
+    @State private var provider = Provider(providerType: .DICEBEAR, spriteType: DiceBearSpriteType.LORELEI)
+    @State private var neufplate = Neufplate()
+    
     
     var body: some View {
         VStack {
@@ -33,8 +35,10 @@ struct ContentView: View {
                     .build()
             }
             .task {
-                let result = await CBSClient.generateCorporateBs()
-                print("API Phrase: \(result)")
+                let result = await neufplate.processWith(provider: provider, on: User.example)
+                if let result {
+                    print("Current NFT: \(result.title ?? "No title") \(result.hash ?? "No hash") \(result.avatar?.url ?? "No avatar")")
+                }
             }
         }
         .padding()
