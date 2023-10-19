@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB50360A2AE152B500C82932 /* Nft.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5036092AE152B500C82932 /* Nft.swift */; };
+		DB50360C2AE1533800C82932 /* CorporateBsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50360B2AE1533800C82932 /* CorporateBsClient.swift */; };
+		DB50360E2AE156F800C82932 /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50360D2AE156F800C82932 /* Phrase.swift */; };
+		DB5036102AE166A100C82932 /* StateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50360F2AE166A100C82932 /* StateProtocol.swift */; };
+		DB5036122AE166E800C82932 /* Neufplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5036112AE166E800C82932 /* Neufplate.swift */; };
+		DB5036152AE1689000C82932 /* TitlingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5036142AE1689000C82932 /* TitlingState.swift */; };
+		DB5036172AE169B100C82932 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5036162AE169B100C82932 /* Provider.swift */; };
+		DB5036192AE1739200C82932 /* MakingCollisionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5036182AE1739200C82932 /* MakingCollisionState.swift */; };
+		DB50361B2AE173C600C82932 /* GeneratingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50361A2AE173C600C82932 /* GeneratingState.swift */; };
 		DBCA7B942ADFE4C70099FA2A /* NeufplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA7B932ADFE4C70099FA2A /* NeufplateApp.swift */; };
 		DBCA7B962ADFE4C70099FA2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA7B952ADFE4C70099FA2A /* ContentView.swift */; };
 		DBCA7B982ADFE4CA0099FA2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCA7B972ADFE4CA0099FA2A /* Assets.xcassets */; };
@@ -40,6 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB5036092AE152B500C82932 /* Nft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nft.swift; sourceTree = "<group>"; };
+		DB50360B2AE1533800C82932 /* CorporateBsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorporateBsClient.swift; sourceTree = "<group>"; };
+		DB50360D2AE156F800C82932 /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
+		DB50360F2AE166A100C82932 /* StateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProtocol.swift; sourceTree = "<group>"; };
+		DB5036112AE166E800C82932 /* Neufplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neufplate.swift; sourceTree = "<group>"; };
+		DB5036142AE1689000C82932 /* TitlingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlingState.swift; sourceTree = "<group>"; };
+		DB5036162AE169B100C82932 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		DB5036182AE1739200C82932 /* MakingCollisionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingCollisionState.swift; sourceTree = "<group>"; };
+		DB50361A2AE173C600C82932 /* GeneratingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratingState.swift; sourceTree = "<group>"; };
 		DBCA7B902ADFE4C70099FA2A /* Neufplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neufplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCA7B932ADFE4C70099FA2A /* NeufplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeufplateApp.swift; sourceTree = "<group>"; };
 		DBCA7B952ADFE4C70099FA2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +101,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB5036062AE1513F00C82932 /* NFT */ = {
+			isa = PBXGroup;
+			children = (
+				DB5036092AE152B500C82932 /* Nft.swift */,
+				DB50360B2AE1533800C82932 /* CorporateBsClient.swift */,
+				DB50360D2AE156F800C82932 /* Phrase.swift */,
+			);
+			path = NFT;
+			sourceTree = "<group>";
+		};
+		DB5036072AE1514600C82932 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				DB5036162AE169B100C82932 /* Provider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		DB5036082AE1515400C82932 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				DB50360F2AE166A100C82932 /* StateProtocol.swift */,
+				DB5036142AE1689000C82932 /* TitlingState.swift */,
+				DB5036182AE1739200C82932 /* MakingCollisionState.swift */,
+				DB50361A2AE173C600C82932 /* GeneratingState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
 		DBCA7B872ADFE4C60099FA2A = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +151,16 @@
 		DBCA7B922ADFE4C70099FA2A /* Neufplate */ = {
 			isa = PBXGroup;
 			children = (
+				DB5036082AE1515400C82932 /* States */,
+				DB5036072AE1514600C82932 /* Provider */,
+				DB5036062AE1513F00C82932 /* NFT */,
 				DBCA7BD02ADFFC8B0099FA2A /* User */,
 				DBCA7BC92ADFE67D0099FA2A /* RobotHash */,
 				DBCA7BC42ADFE5F10099FA2A /* AvatarProtocol */,
 				DBCA7BC32ADFE5EC0099FA2A /* DiceBear */,
 				DBCA7B932ADFE4C70099FA2A /* NeufplateApp.swift */,
 				DBCA7B952ADFE4C70099FA2A /* ContentView.swift */,
+				DB5036112AE166E800C82932 /* Neufplate.swift */,
 				DBCA7B972ADFE4CA0099FA2A /* Assets.xcassets */,
 				DBCA7B992ADFE4CA0099FA2A /* Preview Content */,
 			);
@@ -291,17 +342,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5036192AE1739200C82932 /* MakingCollisionState.swift in Sources */,
 				DBCA7BD22ADFFCA40099FA2A /* BuilderProtocol.swift in Sources */,
+				DB5036102AE166A100C82932 /* StateProtocol.swift in Sources */,
 				DBCA7BD62ADFFCBF0099FA2A /* UserBuilder.swift in Sources */,
+				DB5036152AE1689000C82932 /* TitlingState.swift in Sources */,
+				DB5036172AE169B100C82932 /* Provider.swift in Sources */,
 				DBCA7BC62ADFE62E0099FA2A /* DiceBearAvatar.swift in Sources */,
 				DBCA7BCD2ADFE6A60099FA2A /* RobotHashClient.swift in Sources */,
+				DB50360A2AE152B500C82932 /* Nft.swift in Sources */,
+				DB50361B2AE173C600C82932 /* GeneratingState.swift in Sources */,
 				DBCA7BC02ADFE5AA0099FA2A /* AvatarProtocol.swift in Sources */,
+				DB50360E2AE156F800C82932 /* Phrase.swift in Sources */,
 				DBCA7BC22ADFE5D70099FA2A /* AvatarClientProtocol.swift in Sources */,
 				DBCA7BC82ADFE64B0099FA2A /* DiceBearClient.swift in Sources */,
 				DBCA7BCB2ADFE68F0099FA2A /* RobotHashAvatar.swift in Sources */,
 				DBCA7B962ADFE4C70099FA2A /* ContentView.swift in Sources */,
 				DBCA7BD42ADFFCB20099FA2A /* User.swift in Sources */,
 				DBCA7B942ADFE4C70099FA2A /* NeufplateApp.swift in Sources */,
+				DB5036122AE166E800C82932 /* Neufplate.swift in Sources */,
+				DB50360C2AE1533800C82932 /* CorporateBsClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var avatar = DiceBearAvatar()
     @State private var builder: UserBuilder = UserBuilder()
     @State private var user: User?
+    @State private var CBSClient = CorporateBsClient()
     
     @State private var generatedUrl = ""
     
@@ -31,6 +32,10 @@ struct ContentView: View {
                     .addPhone(number: "0450267598")
                     .build()
             }
+            .task {
+                let result = await CBSClient.generateCorporateBs()
+                print("API Phrase: \(result)")
+            }
         }
         .padding()
     }
@@ -39,3 +44,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
