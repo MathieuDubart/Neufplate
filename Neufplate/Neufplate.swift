@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Neufplate {
+class Neufplate {
     public var state:StateProtocol?
     public var nft: Nft?
     public var provider:Provider?
@@ -15,11 +15,11 @@ struct Neufplate {
     
     init() {}
     
-    mutating func changeToState(_ newState: StateProtocol) -> Void {
+    func changeToState(_ newState: StateProtocol) -> Void {
         state = newState
     }
     
-    mutating func processWith(provider: Provider, on user:User) async -> Nft? {
+    func processWith(provider: Provider, on user:User) async -> Nft? {
         self.state = TitlingState(neufplate: self)
         self.provider = provider
         self.user = user
@@ -28,7 +28,6 @@ struct Neufplate {
         guard let state else { return nil }
         try? await state.onTitling()
 
-        guard let nft else { return nil }
         return self.nft
     }
 
