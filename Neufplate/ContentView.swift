@@ -42,7 +42,7 @@ struct ContentView: View {
                 }
                 
             } label: {
-                Text("COUILLE")
+                Text("Generate NFT")
             }
             .padding()
             .buttonStyle(.plain)
