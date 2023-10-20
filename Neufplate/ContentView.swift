@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var provider = Provider(providerType: .DICEBEAR, spriteType: DiceBearSpriteType.LORELEI)
+    @State private var provider = Provider(providerType: .ROBOTHASH, spriteType: RobotHashSpriteType.CATS)
     @State private var neufplate = Neufplate()
     @State public var nft: Nft = Nft()
     @State private var startTime = Date()
@@ -45,6 +45,7 @@ struct ContentView: View {
                 Text("COUILLE")
             }
             .padding()
+            .buttonStyle(.plain)
             .foregroundStyle(.white)
             .background(.blue)
             .clipShape(RoundedRectangle(cornerRadius: 6))
