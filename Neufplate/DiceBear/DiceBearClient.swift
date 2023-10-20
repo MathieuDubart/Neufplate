@@ -21,7 +21,7 @@ public class DiceBearClient : AvatarClientProtocol {
     private init() {}
     
     public func getRandomAvatarUrl() -> String {
-        return "\(apiUrl)\(spriteType)/svg?seed=\(Int.random(in: 0...10000))"
+        return "\(apiUrl)\(spriteType)/png?seed=\(Int.random(in: 0...10000))"
     }
     
     public func getAvatarFromUrl(with hash: String? = nil) -> String {
@@ -29,7 +29,7 @@ public class DiceBearClient : AvatarClientProtocol {
             return "API call failed: hash is empty."
         }
         
-        return "\(apiUrl)\(spriteType)/svg?seed=\(hash)"
+        return "\(apiUrl)\(spriteType)/png?seed=\(hash)"
     }
     public func setSpriteType(_ newType:DiceBearSpriteType) -> Void{
         spriteType = newType.rawValue

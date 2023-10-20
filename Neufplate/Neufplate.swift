@@ -23,8 +23,8 @@ class Neufplate {
         self.state = TitlingState(neufplate: self)
         self.provider = provider
         self.user = user
-        self.nft = Nft()
             
+        print("### Debug --- Inside neufplate process function")
         guard let state else { return nil }
         try? await state.onTitling()
 

@@ -24,37 +24,42 @@ class MakingCollisionState: StateProtocol {
     }
     
     func onMakingCollision() throws -> String? {
+        
+        print("### Debug --- Inside making collision state function")
+
+        
         var nonce = 0
-        var hash: Data
-        var stringifiedHash = ""
+        var hash: String = ""
         
         guard let nft = neufplate.nft else { throw CollisionErrors.NftNotFound }
         guard let nftTitle = nft.title else { throw CollisionErrors.NoNftTitle }
         
-        while (!stringifiedHash.starts(with: "0000")) {
-            hash = sha256(data: Data("\(nonce)#\(nftTitle)".utf8))
-            stringifiedHash = String(decoding: hash, as: UTF8.self)
+        while (!hash.starts(with: "00000")) {
+            hash = sha256(textToEncode: "\(nonce)#\(nftTitle)")
             nonce += 1
-            print("### Debug - generating Hash")
         }
-        nft.hash = stringifiedHash
+        
+        print("### Debug --- Inside making collision state function -- after while statement")
+        nft.hash = hash
         neufplate.changeToState(GeneratingState(neufplate: self.neufplate))
         
         guard let state = neufplate.state else { throw CollisionErrors.NoState }
-        try? state.onGenerate()
+        let _ = try? state.onGenerate()
         
-        return stringifiedHash
+        return hash
     }
     
     func onGenerate() throws -> String? {
         return nil
     }
     
-    func sha256(data : Data) -> Data {
-        var hash = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
+    func sha256(textToEncode : String) -> String {
+        let data = Data(textToEncode.utf8)
+        var digest = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
         data.withUnsafeBytes {
-            _ = CC_SHA256($0.baseAddress, CC_LONG(data.count), &hash)
+            _ = CC_SHA256($0.baseAddress, CC_LONG(data.count), &digest)
         }
-        return Data(hash)
+        let hexBytes = digest.map { String(format: "%02hhx", $0) }
+        return hexBytes.joined()
     }
 }
